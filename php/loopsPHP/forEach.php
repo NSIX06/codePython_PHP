@@ -1,6 +1,6 @@
 <?php
 
-    $transporte=array("Carro"; "Moto";"Caminhão");
+    $transporte=array("Carro", "Moto", "Caminhão");
 
     foreach($transporte as $veiculo){
         echo "$veiculo</br>"

@@ -9,8 +9,7 @@ if tempo <= 3:
 else:
     print("Carro velho") 
 
-   
-    
+
 nome = str(input("Qual é o seu nome?"))
 if nome == "Felipe":
     print("Seja bem vindo{}!.f(nome)")
