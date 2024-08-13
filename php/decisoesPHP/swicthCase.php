@@ -1,32 +1,32 @@
 <?php
 
-    $opc = 1;
+$opc = 1;
 
-    switch ($opc) {
+switch ($opc) {
 
-        case 1:
-            echo "Carro"
-            break;
+case 1:
+echo "Carro"
+break;
         
-            case 2:
-                echo "Moto"
-                break;
+case 2:
+echo "Moto"
+break;
 
+case 3:
+echo "Biclecta"
+break;
         
-                case 3:
-                    echo "Biclecta"
-                    break;
-        
-                    case 4:
-                        echo "Navio"
-                        break;
-        
-                        case 5:
-                            echo "Avião"
-                            break;
-        default:
-        echo "TRANSPORTE INVÁLIDO!";
-        break;
+case 4:
+echo "Navio"
+break;
+    
+case 5:
+echo "Avião"
+break;
+    
+default:
+echo "TRANSPORTE INVÁLIDO!";
+break;
         
     }
 
