@@ -139,3 +139,22 @@ precos_produtos=list(filter(aplicar_aumento, precos))
 print(precos_produtos)
 
 """
+
+##*Lista J
+"""
+listaNomeJ = ["Fábio", "Jefferson", "Ivy", "Ianka", "John", "Maria", "Ygor", "João"]
+
+j= list(map(lambda nome: nome.startswith('j'), listaNomeJ))
+
+print(j)
+
+"""
+
+##*Lista A
+"""
+listaNomeA = ["Fábio", "Jefferson", "Ivy", "Ianka", "John", "Maria", "Ygor", "João"]
+
+a= list(map(lambda nome: nome.startswith('a'), listaNomeA))
+
+print(a)
+"""
