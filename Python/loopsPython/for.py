@@ -198,7 +198,7 @@ numeros = [9, 56, 45, 59, 555, 489, 723, 520, 49, 87,
 newList = [x for x in numeros if x%3 or 5 == 0]
 """
 
-filtra = list(filter(lambda x: x == x%3 or x%5,
+filtra = list(filter(lambda x: x == x%3 or x%5 ==0,
 numeros))
     
 
