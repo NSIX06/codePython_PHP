@@ -159,29 +159,35 @@ a= list(map(lambda nome: nome.startswith('a'), listaNomeA))
 print(a)
 """
 
-##*Lista das palavras com "rr" e "ss"
+##*Lista das palavras com "rr" e "ss" - Exercício 01
 """
 listaPalavras = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
                  ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
                  "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
                  "massagem" , "ressaltar", "azul"]
 
-rrSS=[x for x in listaPalavras if "rr" and "ss" in x ]
+rrSS=[listaPalavras for x in listaPalavras if "rr" in x or "ss" in x ]
 
-print(rrSS)
-"""
+
+print(listaPalavras)
 """
 
-listaAr = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
+#*Lista AR - Exercício 02
+
+listaAR = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
                  ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
                  "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
                  "massagem" , "ressaltar", "azul"]
 
-newlist=[x for x in listaAr if x.endswith("ar")]
+#?newlist=[x for x in listaAR if x.endswith("ar")]
 
-print(newlist)
+AR= list(filter(lambda x: x.endswith("ar"), listaAR))
+print(AR)
+
+
+
 """
-"""
+#*Lista C - Exercício 03
 listaC = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
                  ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
                  "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
@@ -191,23 +197,32 @@ newlistC=[x for x in listaC if x.startswith("c")]
 
 print(newlistC)
 """
-
+#*Lista de multiplos de 3 e 5 - Exercício 04
+"""
 numeros = [9, 56, 45, 59, 555, 489, 723, 520, 49, 87, 
            74, 71, 51, 46, 125, 265, 433, 547, 589, 33]
-"""
-newList = [x for x in numeros if x%3 or 5 == 0]
-"""
 
+#?newList = [x for x in numeros if x%3 or 5 == 0]
+
+ 
 filtra = list(filter(lambda x: x == x%3 or x%5 ==0,
 numeros))
     
-
-
 print(filtra)
+"""
 
+#*Lista de multiplos de 3 e 5 somados - Exercício 05
 
+"""
+numeros = [9, 56, 45, 59, 555, 489, 723, 520, 49, 87, 
+           74, 71, 51, 46, 125, 265, 433, 547, 589, 33]
 
+listNum = list(map(lambda x: x + 5, filter(lambda x: x % 3 == 0, numeros)))
 
+resultado = [x for x in numeros if x%3 == 0], [x + 5 for x in numeros if x%3 == 0]
+
+print(resultado)
+"""
 
 
 
