@@ -158,3 +158,56 @@ a= list(map(lambda nome: nome.startswith('a'), listaNomeA))
 
 print(a)
 """
+
+##*Lista das palavras com "rr" e "ss"
+"""
+listaPalavras = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
+                 ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
+                 "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
+                 "massagem" , "ressaltar", "azul"]
+
+rrSS=[x for x in listaPalavras if "rr" and "ss" in x ]
+
+print(rrSS)
+"""
+"""
+
+listaAr = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
+                 ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
+                 "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
+                 "massagem" , "ressaltar", "azul"]
+
+newlist=[x for x in listaAr if x.endswith("ar")]
+
+print(newlist)
+"""
+"""
+listaC = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
+                 ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
+                 "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
+                 "massagem" , "ressaltar", "azul"]
+
+newlistC=[x for x in listaC if x.startswith("c")]
+
+print(newlistC)
+"""
+
+numeros = [9, 56, 45, 59, 555, 489, 723, 520, 49, 87, 
+           74, 71, 51, 46, 125, 265, 433, 547, 589, 33]
+"""
+newList = [x for x in numeros if x%3 or 5 == 0]
+"""
+
+filtra = list(filter(lambda x: x == x%3 or x%5,
+numeros))
+    
+
+
+print(filtra)
+
+
+
+
+
+
+
