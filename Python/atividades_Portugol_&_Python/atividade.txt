@@ -1,0 +1,575 @@
+Portugol 
+
+01 - Números par e ímpar:
+
+programa {
+  funcao inicio() {
+    
+    inteiro numero
+    escreva("Digite um número:")
+    leia(numero)
+
+    se(numero % 2 == 0 ){
+
+      escreva("O número ", numero, " é par")	
+    }
+    senao{
+
+      escreva("O número ", numero, " é ímpar")
+    }
+  }
+}
+
+02 - Idade:
+
+programa {
+  funcao inicio() {
+    
+    inteiro idade
+    escreva("Digite a sua idade!:")
+    leia(idade)
+
+    se(idade <= 12){
+
+      escreva("Você é uma criança!")
+    }
+    senao se(idade <=17){
+      escreva("Você é um adolecente!")
+
+    }
+    senao{
+      escreva("Você é um adulto!")
+    }
+  }
+}
+
+03 - numeros:
+
+programa {
+
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+    
+		real nota1, nota2, nota3, media
+
+		
+		escreva("Digite a primeira nota: ")
+		leia(nota1)
+
+		escreva("Digite a segunda nota: ")
+		leia(nota2)
+
+		escreva("Digite a terceira nota: ")
+		leia(nota3)
+
+		media = (nota1 + nota2 + nota3) / 3
+		
+		
+		se (media >= 6)
+		{
+      escreva("Você foi aprovado com a média: ", mat.arredondar(media, 2))
+		}
+		senao
+		{
+			escreva("Você foi reprovado com a média: ", mat.arredondar(media, 2))
+		}
+
+		escreva("\n")
+  }
+}
+
+04 - maior e menor
+
+programa {
+  funcao inicio() {
+    
+    inteiro num1, num2
+
+    escreva("Entre com o primeiro número.:")
+    leia(num1)
+    
+    escreva("Entre com o segundo número.:")
+    leia(num2)
+
+    se(num1>num2){
+      escreva("O número " + num1 + " é maior! ")
+    }
+    senao se(num2>num1){
+
+      escreva("O número " + num2 + " é maior! ")
+    }
+    senao{
+
+      escreva("Os números são iguais")
+    }
+  }
+}
+
+
+
+
+05 - notas:
+
+programa {
+
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+    
+    real nota
+
+    escreva("Digite uma nota de 0 á 10:")
+    leia(nota)
+
+    escolha(nota){
+
+      caso 9-10: 
+      escreva("Excelente")
+      pare
+
+      
+      caso 7-8: 
+      escreva("Bom")
+      pare
+
+      
+      caso 5-6: 
+      escreva("Regular")
+      pare
+
+      
+      caso 0-4: 
+      escreva("Insuficiente")
+      pare
+
+      caso contrario:
+      escreva("Escreva um número válido!")
+      pare
+    }
+
+  }
+}
+
+06 - múltiplos de 3 e 5:
+
+programa {
+  funcao inicio() {
+    
+    inteiro numero
+
+    escreva("Digite um número e veja se ele é um múltiplo de 3 ou 5:")
+    leia(numero)
+
+    se(numero % 3 == 0 ){
+
+      escreva("O número ", numero, " é múltiplo de 3")	
+    }
+    senao{
+
+      escreva("O número ", numero, " é múltiplo de 5")
+    }
+
+  }
+}
+
+07 - desconto
+programa {
+  funcao inicio() {
+    
+    real valor, percentual, valor_final
+
+    valor = 0
+    percentual = 0.10
+    valor_final = 0
+
+    escreva("Insira o valor da compra: ")
+    leia(valor)
+
+    valor_final = valor - (0.10 * valor)
+
+    se (valor > 100) {
+      escreva("\nVálido para desconto!")
+      escreva("\nO valor final da compra com desconto é: ", valor_final)
+      
+    } senao se(valor == 100) {
+      escreva("\nInválido para desconto")
+      
+    }
+    senao{
+
+      escreva("\nFim do programa")
+    }
+
+
+    
+  }
+}
+
+08 - temperatura
+
+programa {
+  funcao inicio() {
+    
+    inteiro temperatura 
+
+    escreva("Digite uma temperatura:")
+    leia(temperatura)
+
+    se(temperatura < 15){
+      escreva("Frio")
+    }
+    senao se (temperatura >= 15 e temperatura <= 25){
+      escreva("Agradável")
+    }
+    senao{
+      escreva("Quente")
+    }
+  }
+}
+ 09 - ano bissexto 
+
+programa {
+  funcao inicio() {
+    inteiro ano
+
+    escreva("Informe o ano (com quatro dígitos): ")
+    leia(ano)
+
+    se (((ano % 4 == 0) e (ano % 100 != 0)) ou (ano % 400 == 0)){
+        escreva("O ano informado é bissexto.")}
+    senao{
+        escreva("O ano informado não é bissexto.")
+    }
+
+  }
+}
+
+
+10 - salário
+
+programa {
+  funcao inicio() {
+    
+    real salario, percentual, salario_final
+
+    salario = 0
+    percentual = 0.15
+    salario_final = 0
+
+    escreva("Insira o seu salário: ")
+    leia(salario)
+
+    salario_final = salario + (0.15 * salario)
+
+    se (salario < 1500) {
+      escreva("\nVálido para aumento!")
+      escreva("\nO salário final é de: ", salario_final)
+      
+    } senao se(salario == 1500) {
+      escreva("\nInválido para auamneto!")
+      
+    }
+    senao{
+
+      escreva("\nFim do programa")
+    }
+  }
+}
+
+11 - voto 
+
+programa {
+  funcao inicio() {
+    
+    inteiro idade 
+
+    escreva("Dgite a sua idade!:")
+    leia(idade)
+
+    se(idade >= 16){
+      escreva("Você está hapto para votar!")
+      leia(idade)
+    }
+    senao{
+      escreva("Você não está hapto para votar!")
+    }
+  }
+}
+
+12 - IMC
+
+programa {
+  funcao inicio() {
+
+    real peso, altura, imc 
+
+
+    escreva("Informe seu peso (em kg): ")
+    leia(peso)
+
+    escreva("Informe sua altura (em metros): ")
+    leia(altura)
+
+    imc = peso / (altura * altura)
+
+    escreva("Seu IMC é: ", imc)
+
+    se (imc < 16)
+    {
+      escreva("\nSua classificação é Magreza grave")
+        }
+
+    senao se (imc < 17){
+        escreva("\nSua classificação é Magreza moderada")
+        }
+
+    senao se (imc < 18.5){
+
+        escreva("\nSua classificação é Magreza leve")}
+
+    senao se (imc < 25){
+
+        escreva("\nSua classificação é Saudável")}
+
+    senao se (imc < 30){
+
+        escreva("\nSua classificação é Sobrepeso")}
+
+    senao se (imc < 35){
+
+        escreva("\nObesidade Grau I")}
+
+    senao se (imc < 40){
+
+        escreva("\nObesidade Grau II")}
+
+    senao{
+      
+        escreva("\nObesidade Grau III (mórbida)")}
+
+  }
+}
+
+13 - dia da semana 
+
+programa {
+  funcao inicio() {
+    
+    real dia
+
+    escreva("Digite um dia de 1 à 7: ")
+    leia(dia)
+
+    escolha(dia){
+
+      caso 1: 
+      escreva("Domingo")
+      pare
+
+      
+      caso 2: 
+      escreva("Segunda-Feira")
+      pare
+
+      
+      caso 3: 
+      escreva("Terça-Feira")
+      pare
+
+      
+      caso 4: 
+      escreva("Quarta-Feira")
+      pare
+
+      
+      caso 5: 
+      escreva("Quinta-Feira")
+      pare
+
+      
+      caso 6: 
+      escreva("Sexta-Feira")
+      pare
+
+      
+      caso 7: 
+      escreva("Sábado")
+      pare
+
+      caso contrario:
+      escreva("Escreva um número válido!")
+      pare
+      }
+
+  }
+}
+
+14 - notas
+
+programa {
+  funcao inicio() {
+     real nota
+
+    escreva("Digite uma nota de 0 á 10:")
+    leia(nota)
+
+    escolha(nota){
+
+      caso 9-10: 
+      escreva("Excelente")
+      pare
+
+      
+      caso 7-8: 
+      escreva("Bom")
+      pare
+
+      
+      caso 5-6: 
+      escreva("Regular")
+      pare
+
+      
+      caso 0-4: 
+      escreva("Insuficiente")
+      pare
+
+      caso contrario:
+      escreva("Escreva um número válido!")
+      pare
+    }
+
+  }
+}
+
+15 - planetas
+
+programa {
+  funcao inicio() {
+    
+    real planeta
+
+    escreva("Digite um número de 1 à 8: ")
+    leia(planeta)
+
+    escolha(planeta){
+
+      caso 1: 
+      escreva("Mercúrio")
+      pare
+
+      
+      caso 2: 
+      escreva("Vênus")
+      pare
+
+      
+      caso 3: 
+      escreva("Terra")
+      pare
+
+      
+      caso 4: 
+      escreva("Marte")
+      pare
+
+      
+      caso 5: 
+      escreva("Júpiter")
+      pare
+
+      
+      caso 6: 
+      escreva("Saturno")
+      pare
+
+      
+      caso 7: 
+      escreva("Urano")
+      pare
+
+      
+      caso 8: 
+      escreva("Netuno")
+      pare
+
+      caso contrario:
+      escreva("Escreva um número válido!")
+      pare
+      }
+
+  }
+}
+
+16 - meses do ano
+
+programa {
+  funcao inicio() {
+    
+    real mes
+
+    escreva("Digite um número de 1 à 12: ")
+    leia(mes)
+
+    escolha(mes){
+
+      caso 1: 
+      escreva("Janeiro")
+      pare
+
+      caso 2: 
+      escreva("Fevereiro")
+      pare
+      
+      caso 3: 
+      escreva("Março")
+      pare
+      
+      caso 4: 
+      escreva("Abril")
+      pare
+
+      caso 5: 
+      escreva("Maio")
+      pare
+
+      caso 6: 
+      escreva("Junho")
+      pare
+
+      caso 7: 
+      escreva("Julho")
+      pare
+
+      caso 8: 
+      escreva("Agosto")
+      pare
+
+      caso 9: 
+      escreva("Setembro")
+      pare
+
+      caso 10: 
+      escreva("Outubro")
+      pare
+
+      caso 11: 
+      escreva("Novembro")
+      pare
+
+      caso 12: 
+      escreva("Dezembro")
+      pare
+
+      caso contrario:
+      escreva("Escreva um número válido!")
+      pare
+      }
+
+  }
+}
+
+
+
+
