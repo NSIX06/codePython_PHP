@@ -4,14 +4,14 @@ $opc = 1;
 switch ($opc) {
     case 1:
         echo "Carro";
-        break; // Adicionei o 'break' aqui
+        break; 
 
     case 2:
         echo "Moto";
         break;
 
     case 3:
-        echo "Bicicleta"; // Corrigi a palavra "Biclecta" para "Bicicleta"
+        echo "Bicicleta"; 
         break;
 
     case 4:
