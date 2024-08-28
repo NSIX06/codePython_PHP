@@ -267,7 +267,7 @@ programa {
       escreva("\nO salário final é de: ", salario_final)
       
     } senao se(salario == 1500) {
-      escreva("\nInválido para auamneto!")
+      escreva("\nInválido para aumento!")
       
     }
     senao{

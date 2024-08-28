@@ -112,3 +112,18 @@ elif temperatura >= 15 and temperatura <=25:
 else:
     print("Quente")
 """
+
+#* 09 - Atividade ano bissexto:
+
+"""
+ano = int(input("Informe o ano (com quatro dígitos): "))
+
+if ((ano % 4 == 0) and (ano % 100 != 0) or (ano % 400 == 0)):
+    print("O ano informado é bissexto.")
+else:
+    print("O ano informado não é bissexto.")
+    
+"""
+
+#* 10 - Atividade salário:
+

@@ -19,7 +19,7 @@ for i in listAge:
 listAge = [76, 99, 65, 50, 71, 33]
 dobro = []
 
-for listAge in listAge:
+for listAge in listAge:##????????????????????????
     dobro.append(listAge*2)
     print(dobro)  
  
@@ -173,7 +173,7 @@ print(listaPalavras)
 """
 
 #*Lista AR - Exercício 02
-
+"""
 listaAR = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousado" 
                  ,"ressaca", "carroça", "cor", "muscular", "dor", "asa", "sonar", "assessor", 
                  "rua", "massagista", "sentimento", "passaporte", "assessoria", "obstáculos", 
@@ -183,7 +183,7 @@ listaAR = ["massa", "carro", "correr", "sol", "rir", "corrida", "corrida", "ousa
 
 AR= list(filter(lambda x: x.endswith("ar"), listaAR))
 print(AR)
-
+"""
 
 
 """
@@ -223,6 +223,89 @@ resultado = [x for x in numeros if x%3 == 0], [x + 5 for x in numeros if x%3 == 
 
 print(resultado)
 """
+#* Lista funcionáros com matrizes que deu errado
+
+"""
+salarioAntigo = 0
+percentual1 = 0.12
+percentual2 = 0.8
+percentual3 = 0.5
+salarioAtual = 0
+salario = 0
+
+#?funcionarios = input("Digite o salário: "[[None] * 10 for _ in range(2)])
+
+salarioAntigo = input(float("Digite o seu salário: "))
+
+salarioAtual =[]
+
+for salarioAntigo in salarioAtual:
+    salarioAtual.append(input(float("Digite o seu salário: ")))
 
 
+if salarioAntigo <= 1400:
+    
+    percentual1 = salario + (0.12 * salario)
+    
+    print(percentual1)
+elif salarioAntigo >= 1401 and salarioAntigo <= 5000:
+    print(percentual2)
+else:
+    print(percentual3)
+"""
+#* Lista funcionáros com matrizes que deu certo
+"""
+salarioAntigo = []
+salarioAtual = []
 
+for i in range(3):
+    salarioAntigo.append(float(input("Digite o seu salário {i+1} : ")))
+    
+salarioAtual = []
+
+for salario in salarioAntigo:
+    if salarioAntigo <= 1400:
+        salarioAtual.append(salario*1.12)
+    elif salario >= 1401 and salario <= 5000:
+        salarioAtual.append(salario*1.08)
+    else:
+        salarioAtual.append(salario*1.05)
+        
+print(salarioAntigo, salarioAtual)
+"""
+"""
+funcionarios = [[None] * 3 for _ in range(2)]
+    
+for i in range(3):
+    nome = input(f"Digite o nome do funcionário [{i}]: ")
+    salario = float(input(f"Digite o salário do funcionário  [{i}]: "))
+    funcionarios [0] [i] = nome
+    funcionarios [1] [i] = salario
+    
+    for i in range(3):
+        print(f"{funcionarios[0] [i]} - Salário R$ {funcionarios[1] [i]}")
+"""       
+#* Lista alunos e provas
+
+alunos = []
+notas = []
+
+
+for i in range(5):
+    alunos = input(f"Digite o nome do aluno [{i}]: ")
+    notas = float(input(f"Digite a nota do aluno  [{i}]: "))
+   
+    
+    for media in notas:
+        if media < 6:
+            alunos.append(media = (notas + notas + notas + notas) /4 )
+        else:
+            print(notas, alunos)
+            
+"""            
+nota1 = float(input("Digite a sua primeira nota:"))
+
+nota2 = float(input("Digite a sua segunda nota:"))
+
+nota3 = float(input("Digite a sua terceira nota:"))
+"""
