@@ -286,7 +286,7 @@ for i in range(3):
         print(f"{funcionarios[0] [i]} - Salário R$ {funcionarios[1] [i]}")
 """       
 #* Lista alunos e provas
-
+"""
 alunos = []
 notas = []
 
@@ -301,7 +301,7 @@ for i in range(5):
             alunos.append(media = (notas + notas + notas + notas) /4 )
         else:
             print(notas, alunos)
-            
+"""            
 """            
 nota1 = float(input("Digite a sua primeira nota:"))
 
@@ -309,3 +309,149 @@ nota2 = float(input("Digite a sua segunda nota:"))
 
 nota3 = float(input("Digite a sua terceira nota:"))
 """
+
+#*Funções com o def
+
+"""
+#?Sem a função
+
+nomes = []
+sobrenomes = []
+nomes_completos = []
+
+for x in range(2):
+    nome = input("Digite o seu nome:")
+    sobrenome = input("Digite o seu sobrenome:")
+    nomes.append(nome)
+    sobrenomes.append(sobrenome)
+    
+    for i in range(len(nomes)):
+        nome_completo = nomes[i] + " " + sobrenomes[i]
+    nomes_completos.append(nome_completo)
+
+print(nomes_completos)
+"""
+'''
+#?Usando a função
+
+def nomes_juntos(nome, sobrenome):
+    return f"{nome} {sobrenome}"
+
+nomes = []
+sobrenomes = []
+nomes_completos = []
+
+for x in range(2):
+    nome = input("Digite o seu nome:")
+    sobrenome = input("Digite o seu sobrenome:")
+    nomes_completos.append(nomes_juntos(nome, sobrenome))
+
+print(nomes_completos)
+'''
+'''
+#?Usando o for 
+precos = [1500, 1100, 1000, 3000]
+
+#!aliquota1 = IR = 0.2
+#!aliquota2 = ISS = 0.15
+#!aliquota3 = CSLL = 0.05
+
+for preco in precos:
+    imposto_ir = 0.2 * preco
+    imposto_iss = 0.15 * preco
+    imposto_csll = 0.5 * preco
+    
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    print(imposto_total)
+'''
+'''
+#?Usando o for com if & else
+precos = [1500, 1100, 1000, 3000]
+
+#!aliquota1 = IR = 0.2
+#!aliquota2 = ISS = 0.15
+#!aliquota3 = CSLL = 0.05
+
+for preco in precos:
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+    else:
+        imposto_ir = 0.2 * preco
+        imposto_iss = 0.15 * preco
+        imposto_csll = 0.5 * preco
+    
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    print(imposto_total)
+'''
+'''
+#?Outro meio de se fazer usando o def
+precos = [1500, 1100, 1000, 3000]
+
+#!aliquota1 = IR = 0.2
+#!aliquota2 = ISS = 0.15
+#!aliquota3 = CSLL = 0.05
+
+def calcular_imposto_total(preco):
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+    else:
+        imposto_ir = 0.2 * preco
+        imposto_iss = 0.15 * preco
+        imposto_csll = 0.5 * preco
+        imposto_total = imposto_ir + imposto_iss + imposto_csll
+        return imposto_total
+    
+for preco in precos:
+    impostos = calcular_imposto_total(preco)
+    print(impostos)
+        
+mais_precos = [2500, 2100, 1400, 1000]
+for preco in mais_precos:
+            print(calcular_imposto_total(preco))
+'''
+'''
+#?Segundo meio de se fazer usando o def
+def calcular_imposto_total(preco):
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+        imposto_iss = 0
+        imposto_csll = 0
+    else:
+        imposto_ir = 0.2 * preco
+        imposto_iss = 0.15 * preco
+        imposto_csll = 0.05 * preco
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    return imposto_total
+
+precos = [1500, 1100, 1000, 3000]
+for preco in precos:
+    impostos = calcular_imposto_total(preco)
+    print(f"Preço: R${preco:.2f} - Imposto Total: R${impostos:.2f}")
+
+mais_precos = [2500, 2100, 1400, 1000]
+for preco in mais_precos:
+    impostos = calcular_imposto_total(preco)
+    print(f"Preço: R${preco:.2f} - Imposto Total: R${impostos:.2f}")
+'''
+'''
+def calcular_media(notas):
+    soma = sum(notas)
+    return soma / len(notas)
+
+notas1 = [7.5, 8.0, 9.0, 6.5]
+notas2 = [5.5, 6.0, 8.0, 7.0]
+
+print(calcular_media(notas1))
+print(calcular_media(notas2))
+'''
+
+#?Lista de números pares
+
+def filtro_numeros(numeros):
+    return [numero for numero in numeros if numero % 2 ==0]
+
+numeros1 = [10, 15, 20, 25, 30]
+numeros2 = [7, 18, 21, 24, 29]
+
+print(filtro_numeros(numeros1))
+print(filtro_numeros(numeros2))
