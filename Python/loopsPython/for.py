@@ -465,12 +465,12 @@ print(filtro_numeros(numeros2))
 
 #*Seu objetivo é garantir que todos os preços atualizados com desconto sejam exibidos corretamente para os clientes da loja.
 
-
+'''
 precos = [299, 200, 499, 300, 400, 559, 1500]  
 
 desconto = list(map(lambda x: x  - (x * 0.1), precos))
 print(desconto)
-
+'''
 #*Você terá que desenvolver um sistema de controle de entrada em uma boate chamada "Boate Azul". Para garantir que a boate siga as regras, apenas pessoas com 18 anos ou mais podem entrar.
 #*Sua tarefa é criar um programa que receba a idade de 10 pessoas que estão na fila para entrar na boate. Depois disso, o programa deve verificar, de forma automática, 
 #*quem tem permissão para entrar, utilizando as ferramentas list, filter e função.
@@ -575,3 +575,4 @@ for x in media_notas:
     else:
         print(f"A media do aluno {i+1} é {x: .2f}, ou seja, ele esta reprovado!")
 '''
+
